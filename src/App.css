@@ -24,6 +24,12 @@ ul li a{
     font-size: 14px;
 }
 /*----------------- header ----------------*/
+.header .logo{
+    margin-left: -18px;
+}
+.navActive{
+    color:#f54ea2;
+}
 header{
     padding:20px;
 }
@@ -87,7 +93,7 @@ header ul li a:hover{
         position:absolute;
         right:30px;
         color:#000;
-        border:1px solid #6185a5;
+        border:1px solid #ccc;
         border-radius: 5px;
         display: block;
         padding:5px 4px;
@@ -225,7 +231,7 @@ button{
     background:#38d161;
     border-radius: 4px;
 }
-.primary-btn:hover{
+.primary-btn:hover,.primary-btn-green:hover{
     background-color: #f54ea2;
     box-shadow: 0 13px 27px 0 rgba(245 78 162 / 25%);
 }
@@ -240,11 +246,17 @@ p{
 /*----------------- branding ----------------*/
 .box{
     gap:10px;
+    transition: 0.4s ease;
+
+}
+.box:hover,.grid:hover{
+    transform: translateY(-2.5px);
 }
 .grid{
     display:grid;
     grid-template-columns: repeat(3,1fr);
     grid-gap:30px;
+    transition: 0.4s ease;
 }
 .branding{
     margin-top: 20px;

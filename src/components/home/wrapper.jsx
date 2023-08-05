@@ -1,6 +1,8 @@
 import React from 'react'
+import {useNavigate} from 'react-router-dom'
 
 function Wrapper() {
+  const navigate = useNavigate();
     const data = [
         {
           title: "LOOKING FOR EXCLUSIVE SERVICES?",
@@ -21,7 +23,7 @@ function Wrapper() {
                         <h3>{val.heading}</h3>
                         <p>{val.desc}</p>
                     </div>
-                    <button className='primary-btn-green'>Comtact Me</button>
+                    <button className='primary-btn-green' onClick={() => navigate('/contact')}>Comtact Me</button>
                     </>
                 )
             })}

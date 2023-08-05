@@ -1,0 +1,108 @@
+.blog{
+  width:100%;
+  min-height: 100vh;
+  background-color: #08071c;
+  padding:30px 20px;
+  margin-top: -35px;
+  z-index: -1;
+}
+.banner{
+    padding:10px 10px ;
+    margin-block-start: 20px;
+}
+.banner .head{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.banner .head h1{
+    color:#f0ededf5;
+}
+.banner .head .social-icons{
+    margin-top: -7px;
+}
+.banner .head .social-icons a:nth-child(1){
+    padding:10px 12px;
+    background-color: #c8c8c8;
+}
+.banner .head .social-icons a:nth-child(1):hover{
+    background: #5386fd;
+    color:#f0ededf5;
+}
+.banner .head .social-icons a:nth-child(2){
+    color:rgb(206, 37, 37);
+    padding:10px 12px;
+    background-color: #c8c8c8;
+}
+.banner .head .social-icons a:nth-child(2):hover{
+    background-color: rgb(206, 37, 37);
+    color:aliceblue;
+}
+.banner .body{
+    margin-block-start: 7px;
+    width:550px;
+    line-height: 24px;
+    font-size: 15px;
+}
+.banner .body span{
+    color:aliceblue;
+}
+.banner .end{
+    margin-block-start: 7px;
+    display:flex;
+    gap:29px;
+    position: relative;
+}
+.banner .end .search i{
+    position:absolute;
+    font-size: 20px;
+    left:11px;
+    top:9px;
+    color:#c8c8c8;
+}
+.banner .end .search{
+    border-radius: 25px;
+    padding:10px;
+    background-color: #17145a9a;
+    width:max-content;
+}
+.banner .end .search input{
+    background: transparent;
+    outline: #453fa891;
+    width:220px;
+    margin-left: 30px;
+    border:none;
+    color:rgba(240, 248, 255, 0.792);
+}
+.banner .end .tags button{
+    align-items: center;
+    padding:10px; 
+    border-radius: 25px;
+    gap:18px;
+    color: #e9e9e9ea;
+    font-size: 14px;
+}
+.banner .end .tags button:hover{
+    background-color: rgb(16, 93, 238);
+}
+
+@media screen and (max-width:768px){
+    .banner .head{
+        display: flex;
+        flex-direction: column;
+        margin-block-end: 15px;
+    }
+    .banner .body{
+        width:100%;
+        text-align: center;
+    }
+    .banner .end{
+        flex-direction: column;
+    }
+    .banner .end .search{
+        width:100%;
+    }
+    .banner .end .tags button{
+        
+    }
+}
