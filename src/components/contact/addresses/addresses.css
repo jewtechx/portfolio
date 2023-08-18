@@ -1,0 +1,36 @@
+.addresses{
+    width:100%;
+    height:contain;
+    padding:30px 50px;
+    background-color:aliceblue;
+}
+.addresses .right{
+    display:flex;
+    justify-items: center;
+    text-align: center;
+    width:100%;
+}
+.timetable-wrapper{
+    margin-top: 100px;
+    margin-left:170px;
+    width:400px;
+    padding:20px 15px ;
+    border-radius:10px;
+    box-shadow:0 10px 20px 0 rgba(0,0,0,0.1);
+}
+.timetable-header{
+    position:relative;
+    bottom:30px;
+    color:#f3f3f3;
+    margin-bottom:40px;
+    background-color: #f54ea2;
+    box-shadow: 0 13px 27px 0 rgba(245 78 162 / 25%);
+}
+@media screen and (max-width:768px){
+    .addresses{
+        flex-direction:column;
+    }
+    .timetable-wrapper{
+        margin-left:0;
+    }
+}

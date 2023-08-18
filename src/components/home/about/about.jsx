@@ -1,4 +1,5 @@
 import React from 'react'
+import {motion} from 'framer-motion'
 
 function About() {
     const data = [
@@ -11,6 +12,19 @@ function About() {
           }
           
       ]
+      const staggerAnimation = {
+        initial:{
+            y:-30,
+            opacity:0
+        },
+        animate:{
+            y:0,
+            opacity:1,
+            transition:{
+                duration:1
+            }
+        }
+      }
   return (
     <>
       <section className='about topMargin'>
@@ -20,21 +34,73 @@ function About() {
                     return(
                         <div className='flex'>
                         <div className="left mtop">
-                            <div className="heading">
+                            <motion.div
+                            variants={staggerAnimation}
+                            initial='initial'
+                            animate='animate'
+                            whileInView='animate'
+                            viewport={{
+                                once:true
+                            }}
+                            className="heading">
                                 <h3>About Me</h3>
                                 <h1>{value.title}</h1>
-                            </div>
+                            </motion.div>
 
-                            <p>{value.desc1}</p>
-                            <p>{value.desc2}</p>
-                            <p>{value.desc3}</p>
+                            <motion.p
+                            variants={staggerAnimation}
+                            initial='initial'
+                            animate='animate'
+                            transition={{
+                                delay:1
+                            }}
+                            whileInView='animate'
+                            viewport={{
+                                once:true
+                            }}
+                            >{value.desc1}</motion.p>
+                            <motion.p
+                            variants={staggerAnimation}
+                            initial='initial'
+                            animate='animate'
+                            transition={{
+                                delay:2
+                            }}
+                            whileInView='animate'
+                            viewport={{
+                                once:true
+                            }}
+                            >{value.desc2}</motion.p>
+                            <motion.p
+                            variants={staggerAnimation}
+                            initial='initial'
+                            animate='animate'
+                            transition={{
+                                delay:3
+                            }}
+                            whileInView='animate'
+                            viewport={{
+                                once:true
+                            }}
+                            >{value.desc3}</motion.p>
                             <button className='primary-btn-green'>Download CV</button>
                         </div>
 
                             <div className="right">
-                                <div className="img">
+                                <motion.div 
+                                initial={{x:200,opacity:0}}
+                                animate={{x:0,opacity:1}}
+                                transition={{
+                                    type:'spring',
+                                    stiffness:100
+                                }}
+                                whileInView='animate'
+                                viewport={{
+                                    once:true
+                                }}
+                                className="img">
                                     <img src={value.cover} alt='Jew'/>
-                                </div>
+                                </motion.div>
                             </div>
                     </div>
                     )

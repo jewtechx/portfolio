@@ -23,7 +23,7 @@ function Wrapper() {
                         <h3>{val.heading}</h3>
                         <p>{val.desc}</p>
                     </div>
-                    <button className='primary-btn-green' onClick={() => navigate('/contact')}>Comtact Me</button>
+                    <button className='primary-btn-green' onClick={() => navigate('/contact')}>Contact Me</button>
                     </>
                 )
             })}

@@ -1,0 +1,51 @@
+.contact{
+    width:100%;
+    height:contain;
+    padding:30px 0;
+}
+.contact .left .heading{
+    margin-top:40px;
+}
+.contact .right form{
+    width:400px;
+    display:flex;
+    flex-direction:column;
+    padding:25px 24px;
+    border-radius:10px;
+    box-shadow:0 10px 29px 0 rgba(0,0,0,0.1)
+}
+.contact .right form .field{
+    display:flex;
+    flex-direction:column;
+    margin-block-end:10px;padding:5px;
+}
+.contact .right form .field input{
+    padding:7px;
+    border-radius:6px; 
+    margin-top:6px;
+    outline:#cc1;
+    border:0.6px solid #e3e3e3;
+
+}
+.contact .right form .field .textarea{
+    padding:7px;
+    border-radius:6px; 
+    margin-top:6px;
+    outline:#cc1;
+    border:0.6px solid #e3e3e3;
+    height:120px;
+    resize:none;
+}
+.button-holder{
+    width:100%;
+    text-align:right;
+}
+.button-holder button{
+    width:120px;
+}
+
+@media screen and (max-width:768px){
+    .contact{
+        flex-direction : column;
+    }
+}

@@ -9,7 +9,7 @@ body{
     font-family: 'Rubik', sans-serif !important;
 }
 .container{
-    max-width: 80%;
+    max-width: 90%;
     margin:auto;
 }
 .flex{
@@ -222,14 +222,16 @@ button{
     cursor:pointer
 }
 .primary-btn{
-    padding:6px 20px;
+    padding:8px 20px;
     background:rgb(108, 23, 255);
     border-radius: 4px;
+    font-family: 'Rubik',sans-serif;
 }
 .primary-btn-green{
-    padding:6px 20px;
+    padding:8px 20px;
     background:#38d161;
     border-radius: 4px;
+    font-family: 'Rubik',sans-serif;
 }
 .primary-btn:hover,.primary-btn-green:hover{
     background-color: #f54ea2;
@@ -277,6 +279,7 @@ p{
     opacity: 0.7;
     color:#fff;
     font-size: 14px;
+    line-height: 24px;
 }
 /*----------------- branding ----------------*/
 /*----------------- about ----------------*/
@@ -302,6 +305,7 @@ p{
 }
 .about .left p{
     font-size: 14px;
+    line-height: 25px;
 }
 .about img{
     position:relative;
@@ -310,7 +314,8 @@ p{
     margin-right: auto;
     width:98%;
     height: 86vh;
-    margin-top: 28px;
+    margin-top: 68px;
+    border-radius: 20px;
 }
 .about img::after{
     content:'';
@@ -329,11 +334,13 @@ p{
     font-size:17px
 }
 .text p{
-    font-size:12px
+    font-size:13px !important;
+    line-height: 24px;
+    margin-top: 10px;
 }
 .services{
     text-align:center;
-    background-color:#f8f9fe;
+    background-color:#f8f9fe !important;
     padding:40px 0;
 }
 .services .box{
@@ -423,7 +430,8 @@ p{
     margin-bottom: 15px;
 }
 .skill .right p {
-    margin-bottom:20px
+    margin-bottom:20px;
+    line-height: 24px;
 }
 /*----------------- skills ----------------*/
 /*----------------- wrapperOne ----------------*/
@@ -535,17 +543,22 @@ p{
     opacity:0;
     transition:0.5s;
 }
-.work .box:nth-child(4)::after,
+.work .box:nth-child(5)::after,
 .work .box:nth-child(3)::after,
-.work .box:nth-child(2)::after,
-.work .box:nth-child(5)::after{
-    width:380px;height:300px;
+.work .box:nth-child(2)::after
+{
+    width:380px;height:310px;
+    background-color: rgba(18, 22, 25, 0.925);
+}
+.work .box:nth-child(4)::after{
+    width:380px;height:312px;
+    margin-top: 3px;
     background-color: rgba(18, 22, 25, 0.925);
 }
 .work .box:nth-child(6)::after,
 .work .box:nth-child(1)::after
 {
-    width:500px;height:306px;
+    width:550px;height:306px;
     background-color: rgba(18, 22, 25, 0.925);
 }
 .work .box:hover::after{
@@ -690,6 +703,7 @@ footer .icon i{
         object-fit: cover;
         width:100%;
         height:100%;
+        border-radius: 10px;
     }
     .wrapper .container{
         max-width:80%;

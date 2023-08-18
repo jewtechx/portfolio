@@ -25,7 +25,7 @@ function Blog() {
 
                                 <div className="text">
                                     <span style={{color:'#cc1', fontSize:'13px'}}>{val.date}</span>
-                                    <h6>{val.title}</h6>
+                                    <h6 style={{color:'#000', padding:'8px 0',fontSize:'15px'}}>{val.title}</h6>
                                     <a style={{textDecoration:'none',color:'#999999',alignItems:'center'}} href='/'>Read more <FontAwesomeIcon icon={faArrowRight}/> </a>
                                 </div>
                               </div>

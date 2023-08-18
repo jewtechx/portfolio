@@ -35,7 +35,7 @@ function Skills() {
                     <Progress done='80' title='HTML'/>
                     <Progress done='80' title='CSS'/>
                     <Progress done='70' title='JAVASCRIPT'/>
-                    <Progress done='60' title='REACT'/>
+                    <Progress done='80' title='REACT'/>
                     <Progress done='85' title='NEXT JS'/>
                     <Progress done='90' title='NODE JS'/>
                     <Progress done='75' title='POSTGRESQL'/>

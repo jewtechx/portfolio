@@ -75,7 +75,7 @@ function Footer() {
 
              <div className="box">
                 <h2>Get in Touch</h2>
-                <p>My skills as a software engineer transcend lines of code, extending into a realm of limitless possibilities</p>
+                <p>My abilities as a software developer surpass the boundaries of code, expanding into a realm where possibilities have no bounds</p>
                  
                  <div class='icon'>
                     <i><FontAwesomeIcon icon={faLocation}/></i>
@@ -96,8 +96,8 @@ function Footer() {
 
            <div className="legal container">
                 <p>Copyright @2023 . All Rights Reserved</p>
-                <label htmlFor="">
-                    Designed & developed by <span>JewTech</span>
+                <label>
+                    Designed & developed by <span>CodeSageJ</span>
                 </label>
            </div>
     </footer> 

@@ -1,5 +1,5 @@
 import React from 'react'
-
+import { motion } from 'framer-motion'
 function Branding() {
     const data = [
         {
@@ -18,13 +18,37 @@ function Branding() {
             desc: "My mind is a canvas of boundless imagination, fueled by a thirst for innovation and originality. Blending artistry with technology, I engineer elegant solutions that push the boundaries of creativity.",
           }          
       ]
+
+      const animateDiv = {
+        initial : {
+            opacity:0,
+            y:80,
+        },
+        animate: (index) => ({
+          opacity:1,
+          y:0,
+          transition:{
+            delay:0.05 * index
+          }
+        })
+      }
   return (
+    
     <>
      <section className='branding'>
       <div className="container grid">
         {
-            data.map((value) => {
-                return (<div className="box flex">
+            data.map((value,i) => {
+                return (
+                <motion.div 
+                variants={animateDiv}
+                initial='initial'
+                whileInView='animate'
+                viewport={{
+                  once:true
+                }}
+                custom={i}
+                className="box flex">
                     <div className='text'>
                         <h1>{value.id}</h1>
                     </div>
@@ -33,7 +57,8 @@ function Branding() {
                         <h2>{value.heading}</h2>
                         <p>{value.desc}</p>
                     </div>
-                </div>)
+                </motion.div>
+                )
             })
         }
         </div>    
