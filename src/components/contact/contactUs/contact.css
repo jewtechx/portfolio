@@ -48,4 +48,10 @@
     .contact{
         flex-direction : column;
     }
+    
+}
+@media screen and (max-width:498px){
+    .contact .right form{
+        width:250px;
+    }
 }

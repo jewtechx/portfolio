@@ -4,6 +4,9 @@
     padding:30px 50px;
     background-color:aliceblue;
 }
+.addresses .left .heading h1{
+
+}
 .addresses .right{
     display:flex;
     justify-items: center;
@@ -25,6 +28,12 @@
     margin-bottom:40px;
     background-color: #f54ea2;
     box-shadow: 0 13px 27px 0 rgba(245 78 162 / 25%);
+}
+.day-hours{
+    margin-top:6px;
+}
+.day-hours h4{
+    color:#111112;
 }
 @media screen and (max-width:768px){
     .addresses{

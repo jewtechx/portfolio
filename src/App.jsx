@@ -9,6 +9,7 @@ import HomePages from './components/home/pageContent/homePages';
 import TestimonialPage from './components/testimonials/pageContent/testimonialPage';
 import BlogPageContent from './components/blog/pageContent/blogPageContent'
 import ContactPageContent from './components/contact/pageContent/contactPageContent'
+import ShopPageContent from  "./components/shop/pageContent/shopPageContent"
 
 export default function App() {
   return (
@@ -20,6 +21,7 @@ export default function App() {
          <Route path='/testimonials' element={<TestimonialPage />} />
          <Route path='/blog' element={<BlogPageContent />}/>
          <Route path='/contact' element={<ContactPageContent />}/>
+         <Route path='/shop' element={<ShopPageContent  />}/>
       </Routes>
       <Footer />
     </BrowserRouter>

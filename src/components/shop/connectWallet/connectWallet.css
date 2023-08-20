@@ -1,0 +1,23 @@
+.wallet{
+    width:100%;
+    height:contain;
+    padding: 50px 0;
+    align-items: center;
+    justify-content: center;
+}
+.wrapper{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-direction: column;
+    margin-bottom: 70px;
+}
+.wallet .wrapper img{
+    width:300px;
+}
+.wallet .wrapper a{
+    text-decoration:none;
+    font-size:25px;
+    color:rgb(44, 44, 44);
+    font-weight: 600;
+}

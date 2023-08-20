@@ -91,11 +91,15 @@
     .banner .head{
         display: flex;
         flex-direction: column;
+        text-align:center;
         margin-block-end: 15px;
     }
     .banner .body{
         width:100%;
         text-align: center;
+    }
+    .banner .head .social-icons{
+        margin-top:7px;
     }
     .banner .end{
         flex-direction: column;

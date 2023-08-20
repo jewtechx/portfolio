@@ -51,4 +51,8 @@
     .testimonial .wrapper{
         grid-template-columns: repeat(1, 1fr);
     }
+    .wrapper img{
+        width:220px;
+        height:250px;
+    }
 }
