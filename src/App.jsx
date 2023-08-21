@@ -10,7 +10,12 @@ import TestimonialPage from './components/testimonials/pageContent/testimonialPa
 import BlogPageContent from './components/blog/pageContent/blogPageContent'
 import ContactPageContent from './components/contact/pageContent/contactPageContent'
 import ShopPageContent from  "./components/shop/pageContent/shopPageContent"
+import PortfolioPageContent from "./components/portfolio/pageContent/portfolioPageContent"
 
+       import Websites from "./components/portfolio/websites/websites"
+       import Graphics from "./components/portfolio/graphics/graphics"
+       import MobileApps from "./components/portfolio/mobile-apps/mobile-apps"
+       import SmartContracts from "./components/portfolio/smart-contracts/smart-contracts"
 export default function App() {
   return (
     <>
@@ -22,6 +27,12 @@ export default function App() {
          <Route path='/blog' element={<BlogPageContent />}/>
          <Route path='/contact' element={<ContactPageContent />}/>
          <Route path='/shop' element={<ShopPageContent  />}/>
+         <Route path='/portfolio' element={<PortfolioPageContent  />}>
+            <Route index element={<Websites/>}/>
+            <Route path='graphics' element={<Graphics/>}/>
+            <Route path="mobile-apps" element={<MobileApps/>}/>
+            <Route path="smart-contracts" element={<SmartContracts/>}/>
+         </Route>
       </Routes>
       <Footer />
     </BrowserRouter>

@@ -1,0 +1,24 @@
+.portfolio-nav{
+    width:100%;
+    padding:20px 0;
+}
+.portfolio-nav .nav{
+    display: flex;
+    gap:15px;
+}
+.portfolio-nav .nav a{
+    text-decoration: none;
+    color:rgb(34, 34, 34);
+    font-size:15px;
+}
+.portfolio-nav .nav .navActive{
+    color:#f54ea2;
+}
+@media screen and (max-width:768px) {
+    .portfolio-nav .nav{
+        gap:8px;
+    }
+    .portfolio-nav .nav a{
+        font-size:11px;
+    }
+}

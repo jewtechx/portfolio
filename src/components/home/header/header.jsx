@@ -12,9 +12,11 @@ function Header() {
     header.classList.toggle('active', window.screenY > 200)
   })
 
-const {pathname} = useLocation()
+const path = useLocation().pathname
+const pathname = path.split("/")[1]
+// alert(pathname)
 
-  if(pathname == '/blog'){
+  if(pathname == 'blog'){
     var blogNav = {
         backgroundColor:'#08071c',
         padding:'20px',
@@ -39,22 +41,22 @@ const {pathname} = useLocation()
         <div className="nav">
             <ul style={sideNav} className={sideBar ? 'nav-links-sidebar' : 'nav-links'} onClick={() => setSideBar(false)}>
                 <li>
-                    <Link style={links} to='/' className={pathname == '/' ? 'navActive' : '' }>Home</Link>
+                    <Link style={links} to='/' className={pathname == '' ? 'navActive' : '' }>Home</Link>
                 </li>
                 <li>
-                    <Link style={links} to='/testimonials' className={pathname == '/testimonials' ? 'navActive' : '' }>Testimonials</Link>
+                    <Link style={links} to='/testimonials' className={pathname == 'testimonials' ? 'navActive' : '' }>Testimonials</Link>
                 </li>
                 <li>
-                    <Link style={blogLink} to='/blog' className={pathname == '/blog' ? 'navActive' : '' }>Blog</Link>
+                    <Link style={blogLink} to='/blog' className={pathname == 'blog' ? 'navActive' : '' }>Blog</Link>
                 </li>
                 <li>
-                    <Link style={links} to='/portfolio' className={pathname == '/portfolio' ? 'navActive' : '' }>Portfolio</Link>
+                    <Link style={links} to='/portfolio' className={pathname == 'portfolio' ? 'navActive' : '' }>Portfolio</Link>
                 </li>
                 <li>
-                    <Link style={links} to='/shop' className={pathname == '/shop' ? 'navActive' : '' }>Shop</Link>
+                    <Link style={links} to='/shop' className={pathname == 'shop' ? 'navActive' : '' }>Shop</Link>
                 </li>
                 <li>
-                    <Link style={links} to='/contact' className={pathname == '/contact' ? 'navActive' : '' }>Contact</Link>
+                    <Link style={links} to='/contact' className={pathname == 'contact' ? 'navActive' : '' }>Contact</Link>
                 </li>
                 <li className='icon' style={links}>
                     <i><FontAwesomeIcon icon={faSearch} className='HeaderIcon' /></i>

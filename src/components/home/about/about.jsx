@@ -15,11 +15,9 @@ function About() {
       const staggerAnimation = {
         initial:{
             y:-30,
-            opacity:0
         },
         animate:{
             y:0,
-            opacity:1,
             transition:{
                 duration:1
             }
@@ -88,8 +86,8 @@ function About() {
 
                             <div className="right">
                                 <motion.div 
-                                initial={{x:200,opacity:0}}
-                                animate={{x:0,opacity:1}}
+                                initial={{x:200}}
+                                animate={{x:0}}
                                 transition={{
                                     type:'spring',
                                     stiffness:100

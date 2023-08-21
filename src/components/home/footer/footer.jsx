@@ -77,9 +77,9 @@ function Footer() {
                 <h2>Get in Touch</h2>
                 <p>My abilities as a software developer surpass the boundaries of code, expanding into a realm where possibilities have no bounds</p>
                  
-                 <div class='icon'>
+                 <div className='icon'>
                     <i><FontAwesomeIcon icon={faLocation}/></i>
-                    <label htmlFor=''>Location:Accra USA</label>
+                    <label htmlFor=''>Location:Accra Ghana</label>
                   </div>
 
                   <div className="icon">
