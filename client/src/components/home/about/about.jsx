@@ -12,90 +12,92 @@ function About() {
           }
           
       ]
-      const staggerAnimation = {
-        initial:{
-            y:-30,
+      const animateDiv = {
+        initial : {
+            opacity:0,
+            y:80,
         },
-        animate:{
-            y:0,
-            transition:{
-                duration:1
-            }
-        }
+        animate: (index) => ({
+          opacity:1,
+          y:0,
+          transition:{
+            delay:0.05 * index
+          }
+        })
+      }
+
+      //download cv
+
+      const DownloadCV = () => {
+        const link = document.createElement('a')
+        const filePath = './cv.pdf'
+        link.href = filePath
+        link.download = 'jew-cv.pdf'
+        link.click()
+        alert('Dowloading...')
       }
   return (
     <>
+
       <section className='about topMargin'>
         <div className="container flex">
             {
-                data.map((value) => {
+                data.map((value,i) => {
                     return(
-                        <div className='flex'>
+                        <div key={value.title} className='flex'>
                         <div className="left mtop">
                             <motion.div
-                            variants={staggerAnimation}
+                            variants={animateDiv}
                             initial='initial'
-                            animate='animate'
                             whileInView='animate'
                             viewport={{
-                                once:true
+                              once:true
                             }}
+                            custom={i}
                             className="heading">
                                 <h3>About Me</h3>
                                 <h1>{value.title}</h1>
                             </motion.div>
 
                             <motion.p
-                            variants={staggerAnimation}
+                            variants={animateDiv}
                             initial='initial'
-                            animate='animate'
-                            transition={{
-                                delay:1
-                            }}
                             whileInView='animate'
                             viewport={{
-                                once:true
+                              once:true
                             }}
+                            custom={i}
                             >{value.desc1}</motion.p>
                             <motion.p
-                            variants={staggerAnimation}
+                            variants={animateDiv}
                             initial='initial'
-                            animate='animate'
-                            transition={{
-                                delay:2
-                            }}
                             whileInView='animate'
                             viewport={{
-                                once:true
+                              once:true
                             }}
+                            custom={i}
                             >{value.desc2}</motion.p>
                             <motion.p
-                            variants={staggerAnimation}
+                            variants={animateDiv}
                             initial='initial'
-                            animate='animate'
-                            transition={{
-                                delay:3
-                            }}
                             whileInView='animate'
                             viewport={{
-                                once:true
+                              once:true
                             }}
+                            custom={i}
                             >{value.desc3}</motion.p>
-                            <button className='primary-btn-green'>Download CV</button>
+                            <button onClick={() => DownloadCV()} className='primary-btn-green'>Download CV</button>
                         </div>
 
                             <div className="right">
                                 <motion.div 
-                                initial={{x:200}}
-                                animate={{x:0}}
-                                transition={{
-                                    type:'spring',
-                                    stiffness:100
-                                }}
-                                whileInView='animate'
-                                viewport={{
-                                    once:true
-                                }}
+                               variants={animateDiv}
+                               initial='initial'
+                               whileInView='animate'
+                               viewport={{
+                                 once:true
+                               }}
+                               custom={i}
                                 className="img">
                                     <img src={value.cover} alt='Jew'/>
                                 </motion.div>

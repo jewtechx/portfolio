@@ -8,7 +8,7 @@ const data = [
         subImages4: "/images/employee crud/Capture4.PNG",
         subImages5: "/images/employee crud/Capture5.PNG",
         linkToWeb: "#",
-        linkToGithub: '#',
+        linkToGithub: 'https://github.com/jewtechx/employees-management-system',
     },
     {
         mainCoverImage: "/images/blogPortfolio/blog1.png",
@@ -19,7 +19,18 @@ const data = [
         subImages4: "/images/blogPortfolio/blog4.png",
         subImages5: "/images/blogPortfolio/blog5.png",
         linkToWeb: "#",
-        linkToGithub: '#',
+        linkToGithub: 'https://github.com/jewtechx/BlogWebsite',
+    },
+    {
+        mainCoverImage: "/images/nasa/nasa1.png",
+        title: "Nasa Mission Control System",
+        desc: "A full crud app that allows nasa mission admins schedule and abort mission. It keeps track of the history too",
+        subImages2: "/images/nasa/nasa2.png",
+        subImages3: "/images/nasa/nasa3.png",
+        subImages4: "/images/nasa/nasa1.png",
+        subImages5: "/images/nasa/nasa3.png",
+        linkToWeb: "#",
+        linkToGithub: 'https://github.com/jewtechx/nasa-mission-control-system',
     },
 ]
 export default data

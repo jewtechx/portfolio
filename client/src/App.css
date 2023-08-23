@@ -8,6 +8,7 @@
 body{
     font-family: 'Rubik', sans-serif !important;
     background-color:#fff ;
+    overflow-x: hidden;
 }
 .container{
     max-width: 90%;
@@ -459,9 +460,10 @@ p{
 .work{
     background-color: #08071c;
     padding:40px 0;
-    height:170vh;
+    height:140vh;
+    z-index:99;
     overflow-x: hidden;
-    overflow-y: hidden;
+    overflow-y:hidden;
 }
 .work .heading{
     text-align:center;
@@ -469,6 +471,7 @@ p{
     padding:50px 0;
 }
 .work .content{
+    height:contain;
     display:grid;
     grid-template-columns: repeat(8,1fr);
     grid-template-rows:repeat(8, 5vw) ;
@@ -514,8 +517,9 @@ p{
 }
 .work img{
     width:100%;
-    height:300px;
-    object-fit: cover;
+    height:100%;
+    object-fit: contain;
+    z-index:-99;
 }
 .work .box{
     position: relative;
@@ -550,18 +554,18 @@ p{
 .work .box:nth-child(3)::after,
 .work .box:nth-child(2)::after
 {
-    width:380px;height:310px;
+    width:100%;height:100%;
     background-color: rgba(18, 22, 25, 0.925);
 }
 .work .box:nth-child(4)::after{
-    width:380px;height:312px;
+    width:100%;height:100%;
     margin-top: 3px;
     background-color: rgba(18, 22, 25, 0.925);
 }
 .work .box:nth-child(6)::after,
 .work .box:nth-child(1)::after
 {
-    width:550px;height:306px;
+    width:100%;height:100%;
     background-color: rgba(18, 22, 25, 0.925);
 }
 .work .box:hover::after{

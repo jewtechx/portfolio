@@ -1,18 +1,38 @@
 import React from 'react'
+import {motion} from 'framer-motion'
+
 import "./addresses.css"
 
 export default function Addresses(){
+    var animateDiv = {
+        initial: {
+            x:100
+        },
+        animate:{
+            x:0
+        }
+    }
     return (
         <div className="addresses flex">
-          <div className="left">
+          <motion.div 
+          variants={animateDiv}
+          initial="initial"
+          whileInView="animate"
+          viewport={{once:true}}
+          className="left">
             <div className="heading">
                 <h1>Visit Me</h1>
                 <p>Come see us in person and experience my world of innovation and creativity. Schedule a visit today!</p>
             </div>
-          </div>
+          </motion.div>
 
           <div className="right">
-             <div className="timetable-wrapper">
+             <motion.div
+             variants={animateDiv}
+             initial="initial"
+             whileInView="animate"
+             viewport={{once:true}}
+              className="timetable-wrapper">
                  <span className="timetable-header primary-btn">Days - Hours</span>
 
                  <div className="timetable">
@@ -29,7 +49,7 @@ export default function Addresses(){
                         <p>1:30pm - 5:30pm</p>
                     </div>
                  </div>
-             </div>
+             </motion.div>
           </div>
         </div>
     )

@@ -1,0 +1,19 @@
+.accordion{
+    display:flex;
+    flex-direction: column;
+    gap:15px;
+    margin-block-end: 100px;
+}
+.accordion-title{
+    padding:20px 15px;
+    width: 100%;
+    background-color: rgb(251, 253, 255);
+    border-left: 4px solid rgb(255, 74, 152);
+    box-shadow: 0 7px 12px 0 rgba(0,0,0,0.1);
+}
+.accordion-content{
+    margin-top: 20px;
+    line-height: 26px;
+    font-size:13px;
+    padding:2px 15px
+}

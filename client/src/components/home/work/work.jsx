@@ -1,7 +1,7 @@
 import React from 'react'
 import Data from './Data'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import {faTabletScreenButton} from '@fortawesome/free-solid-svg-icons'
+// import {fa} from '@fortawesome/free-solid-svg-icons'
 
 function Work() {
   return (
@@ -16,7 +16,7 @@ function Work() {
                 Data.map(val => {
                     return(
                         <>
-                        <div className="box">
+                        <div key={val.title} className="box">
                             <div className="img">
                                 <img src={process.env.PUBLIC_URL + `/external/Resource-One-master/${val.cover}`} alt='work'/>
                             </div>
@@ -27,7 +27,7 @@ function Work() {
                                     <p>{val.desc}</p>
                                 </div>
                                 <div className="icon">
-                                    <FontAwesomeIcon icon={faTabletScreenButton} className='.'/>
+                                    {/* <FontAwesomeIcon icon={faTabletScreenButton} className='.'/> */}
                                 </div>
                             </div>
                         </div>

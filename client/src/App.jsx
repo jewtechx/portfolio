@@ -16,6 +16,10 @@ import PortfolioPageContent from "./components/portfolio/pageContent/portfolioPa
        import Graphics from "./components/portfolio/graphics/graphics"
        import MobileApps from "./components/portfolio/mobile-apps/mobile-apps"
        import SmartContracts from "./components/portfolio/smart-contracts/smart-contracts"
+
+import FAQ from './components/faq/faq';
+import AdminPageContent from './components/admin/pageContent/adminPageContent';
+
 export default function App() {
   return (
     <>
@@ -33,6 +37,8 @@ export default function App() {
             <Route path="mobile-apps" element={<MobileApps/>}/>
             <Route path="smart-contracts" element={<SmartContracts/>}/>
          </Route>
+         <Route path='/faq' element={<FAQ />}/>
+         <Route path='/admin' element={<AdminPageContent />}/>
       </Routes>
       <Footer />
     </BrowserRouter>

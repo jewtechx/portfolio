@@ -3,7 +3,7 @@
     padding:20px 0;
 }
 .portfolio-nav .nav{
-    display: flex;
+    display:flex;
     gap:15px;
 }
 .portfolio-nav .nav a{

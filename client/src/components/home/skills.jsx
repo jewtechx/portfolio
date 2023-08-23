@@ -1,16 +1,39 @@
 import React from 'react'
+import {motion} from 'framer-motion'
 
 function Skills() {
-    const Progress = ({done, title}) => {
+    const animateDiv = {
+        initial : {
+            opacity:0,
+            y:80,
+        },
+        animate: (index) => ({
+          opacity:1,
+          y:0,
+          transition:{
+            delay:0.05 * index
+          }
+        })
+      }
+
+    const Progress = ({done, title,id}) => {
         return (
-            <div className='wrapper'>
+            <motion.div 
+            variants={animateDiv}
+                initial='initial'
+                whileInView='animate'
+                viewport={{
+                  once:true
+                }}
+                custom={id}
+                className='wrapper'>
             <div className="progress">
                 <div className="progress-done" style={{opacity:1,width:`${done}%`}}>
                     <h4>{title}</h4>
                     <h4>{done}%</h4>
                 </div>
             </div>
-            </div>
+            </motion.div>
         )
     }
 
@@ -32,24 +55,32 @@ function Skills() {
 
             <div className="content flex">
                 <div className="left topMargin">
-                    <Progress done='80' title='HTML'/>
-                    <Progress done='80' title='CSS'/>
-                    <Progress done='70' title='JAVASCRIPT'/>
-                    <Progress done='80' title='REACT'/>
-                    <Progress done='85' title='NEXT JS'/>
-                    <Progress done='90' title='NODE JS'/>
-                    <Progress done='75' title='POSTGRESQL'/>
-                    <Progress done='50' title='SOLIDITY'/>
+                    <Progress done='80' title='HTML' id="1"/>
+                    <Progress done='80' title='CSS' id="2"/>
+                    <Progress done='70' title='JAVASCRIPT' id="3"/>
+                    <Progress done='80' title='REACT' id="4"/>
+                    <Progress done='85' title='NEXT JS' id="5"/>
+                    <Progress done='90' title='EXPRESS JS' id="6"/>
+                    <Progress done='75' title='POSTGRESQL' id="7"/>
+                    <Progress done='50' title='SOLIDITY' id="8"/>
+                    <Progress done='50' title='PYTHON' id="9"/>
                 </div>
 
                 <div className="right topMargin">
-                    {data.map((value) => {
+                    {data.map((value,i) => {
+                        
                         return(
-                            <>
+                            <motion.div
+                            variants={animateDiv}
+                            initial={{opacity:0}}
+                            animate={{opacity:1}}
+                            whileInView='animate'
+                            viewport={{once:true}}
+                            >
                              <h1>{value.title}</h1>
                              <p>{value.desc1}</p>
                              <p>{value.desc2}</p>
-                            </>
+                            </motion.div>
                         )
                     })}
                 </div>

@@ -1,4 +1,6 @@
 import React from 'react'
+import {motion} from "framer-motion"
+
 import './comments.css'
 
 function Comments() {
@@ -40,6 +42,19 @@ function Comments() {
         },
       ];
       
+      const animateDiv = {
+        initial : {
+            opacity:0,
+            y:80,
+        },
+        animate: (index) => ({
+          opacity:1,
+          y:0,
+          transition:{
+            delay:0.05 * index
+          }
+        })
+      }
   return (
     <div className='comments'>
       <div className="heading">
@@ -48,10 +63,18 @@ function Comments() {
         </div>
 
         {
-            data.map(val => {
+            data.map((val,i) => {
                 return (
                     <>
-                     <div className='comment-wrapper'>
+                     <motion.div 
+                     variants={animateDiv}
+                     initial='initial'
+                     whileInView='animate'
+                     viewport={{
+                       once:true
+                     }}
+                     custom={i}
+                     className='comment-wrapper'>
                         <div className="img">
                             <img src={val.image} alt={val.sender}/>
                         </div>
@@ -64,7 +87,7 @@ function Comments() {
                                   <span>{val.date}</span>
                                </div>
                         </div>
-                     </div>
+                     </motion.div>
                     </>
                 )
             })

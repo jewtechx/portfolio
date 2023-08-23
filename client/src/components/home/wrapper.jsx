@@ -18,7 +18,7 @@ function Wrapper() {
             {data.map((val) => {
                 return(
                     <>
-                    <div className="box">
+                    <div key={val.title} className="box">
                         <h1>{val.title}</h1>
                         <h3>{val.heading}</h3>
                         <p>{val.desc}</p>

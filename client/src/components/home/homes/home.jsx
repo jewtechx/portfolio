@@ -75,12 +75,12 @@ function Home() {
              className="right topMargin">
                 <motion.h1 variants={staggerVariants}>I AM A <br/> SOFTWARE ENGINEER</motion.h1>
                 <motion.div className="social-icons" variants={staggerVariants}>
-                    <a href=''><FontAwesomeIcon icon={faFacebook} className='facebook i' /></a>
-                    <a href=''><FontAwesomeIcon icon={faInstagram} className='instagram i' /></a>
-                    <a href=''><FontAwesomeIcon icon={faTwitter} className='twitter i' /></a>
-                    <a href=''><FontAwesomeIcon icon={faYoutube} className='youtube i' /></a>
-                    <a href=''><FontAwesomeIcon icon={faPinterest} className='pinterest i' /></a>
-                    <a href=''><FontAwesomeIcon icon={faDribbble} className='dribbble i' /></a>
+                    <a href='https://web.facebook.com/profile.php?id=61550055825828'><FontAwesomeIcon icon={faFacebook} className='facebook i' /></a>
+                    <a href='https://www.instagram.com/mrr.jew/'><FontAwesomeIcon icon={faInstagram} className='instagram i' /></a>
+                    <a href='https://twitter.com/JewLarbi'><FontAwesomeIcon icon={faTwitter} className='twitter i' /></a>
+                    <a href='https://www.youtube.com/@CodeSageJ-ll5fq'><FontAwesomeIcon icon={faYoutube} className='youtube i' /></a>
+                    <a href='https://www.pinterest.com/jwlarbi/'><FontAwesomeIcon icon={faPinterest} className='pinterest i' /></a>
+                    <a href='https://dribbble.com/CodeSageJ'><FontAwesomeIcon icon={faDribbble} className='dribbble i' /></a>
                     </motion.div>
 
               <motion.p variants={staggerVariants}>Through the alchemy of code, I breathe life into visionary ideas, crafting immersive digital experiences that leave lasting impressions. As a software engineer, my purpose is to empower, innovate, and transform challenges into opportunities for growth and progress. Let's collaborate and embark on a journey of technological wonder, where dreams become reality through the artistry of programming.</motion.p>

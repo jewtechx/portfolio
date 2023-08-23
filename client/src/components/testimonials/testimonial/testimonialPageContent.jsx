@@ -1,6 +1,7 @@
 import React from 'react'
 import './testimonial.css';
 import { Tilt } from 'react-tilt';
+import {motion, transform} from "framer-motion"
 
 const defaultOptions = {
 	reverse:        false,  // reverse the tilt direction
@@ -45,25 +46,50 @@ function TestimonialPageContent() {
       <section className='testimonial'>
         <div className="heading">
             <h2>TESTIMONIALS</h2>
-            <h1>What Clients Say About Us</h1>
+            <h1>What Clients Say About Me</h1>
         </div>
         {
-          data.map(val => {
+          data.map((val,i) => {
+            {
+              var animate = {
+                initial: (index) => ( {
+                  width:0,
+                  x:index % 2 == 0 ? -100 : 100,
+                  transform:"rotate(360deg)"
+                 
+              }),
+                  animate: (index) => (
+                    {
+                      width:"90%",
+                      x:0,
+                      // borderRadius:"unset",
+                      transform:"rotate(0)"
+                    }
+                  )}
+            }
             return(
               <>
                 <div className="wrapper">
                     <div className="img">
                         <Tilt options={defaultOptions}>
-                        <img src={val.image} alt={val.author} />
+                           <motion.img 
+                           variants={animate}
+                           initial='initial'
+                           whileInView='animate'
+                           viewport={{
+                             once:true
+                           }}
+                           custom={i}
+                           src={val.image} alt={val.author} />
                         </Tilt>
                     </div>
 
-                    <div className="text">
+                    <motion.div initial={{opacity:0}} animate={{opacity:1}} transition={{delay:0.02 * i}} className="text">
                         <span>""</span>
                         <h3>{val.title}</h3>
                         <p>{val.testimonial}</p>
                         <h4>{val.author}</h4>
-                    </div>
+                    </motion.div>
                 </div>
               </>
             )

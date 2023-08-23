@@ -33,7 +33,9 @@
     margin-top:6px;
 }
 .day-hours h4{
-    color:#111112;
+    color:#5c5c5c;
+    font-size:14px;
+    margin-bottom: 5px;
 }
 @media screen and (max-width:768px){
     .addresses{

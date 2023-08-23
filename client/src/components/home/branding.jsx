@@ -41,6 +41,7 @@ function Branding() {
             data.map((value,i) => {
                 return (
                 <motion.div 
+                key={value.heading}
                 variants={animateDiv}
                 initial='initial'
                 whileInView='animate'

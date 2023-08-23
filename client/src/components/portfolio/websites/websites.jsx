@@ -1,4 +1,5 @@
 import React from 'react'
+import {motion} from "framer-motion"
 import "./websites.css"
 import data from './websitesData'
 
@@ -23,6 +24,21 @@ export default function Websites() {
     setGetIndex(index)
     setNewCoverImg(coverImg)
   }
+
+  const animateDiv = {
+    initial : {
+        opacity:0,
+        y:80,
+    },
+    animate: (index) => ({
+      opacity:1,
+      y:0,
+      transition:{
+        delay:0.05 * index
+      }
+    })
+  }
+
   const Website = 
         data.map((value,index) => {
         return(
@@ -43,10 +59,32 @@ export default function Websites() {
 
 
             <div className="more-images">
-              <img src={value.subImages2} onClick={() => getCoverImg(value.subImages2,index)}alt="more-images"/>
-              <img src={value.subImages3} onClick={() => getCoverImg(value.subImages3,index)}alt="more-images"/>
-              <img src={value.subImages4} onClick={() => getCoverImg(value.subImages4,index)}alt="more-images"/>
-              <img src={value.subImages5} onClick={() => getCoverImg(value.subImages5,index)}alt="more-images"/>
+              <motion.img
+              initial={{y:50}}
+              whileInView={{y:0}}
+              viewport={{once:true}}
+              src={value.subImages2} onClick={() => getCoverImg(value.subImages2,index)}alt="more-images"/>
+              
+              <motion.img 
+              initial={{y:50}}
+              whileInView={{y:0}}
+              viewport={{once:true}}
+              transition={{delay:0.2}}
+              src={value.subImages3} onClick={() => getCoverImg(value.subImages3,index)}alt="more-images"/>
+              
+              <motion.img 
+              initial={{y:50}}
+              whileInView={{y:0}}
+              viewport={{once:true}}
+              transition={{delay:0.4}}
+              src={value.subImages4} onClick={() => getCoverImg(value.subImages4,index)}alt="more-images"/>
+              
+              <motion.img
+              initial={{y:50}}
+              whileInView={{y:0}}
+              viewport={{once:true}}
+              transition={{delay:0.6}}
+              src={value.subImages5} onClick={() => getCoverImg(value.subImages5,index)}alt="more-images"/>
             </div>
           </div>
         )

@@ -1,22 +1,48 @@
 import React from 'react'
+import {motion} from 'framer-motion'
 import ServicesData from './ServicesData'
 
 function Servicess() {
+
+  const animateDiv = {
+    initial : (index) => (
+        {
+          opacity:0,
+          y:index % 2 != 0 ? 80 : -80,
+      }
+    ),
+    animate: (index) => ({
+      opacity:1,
+      y:0,
+      transition:{
+        delay:0.02 * index
+      }
+    })
+  }
+
   return (
     <div>
       <section className='services topMargin'>
         <div className="container">
-          <div className="heading">
+          <motion.div initial={{y:80}} animate={{y:0}} className="heading">
             <h3>MY SERVICES</h3>
             <h1>Interactive Services Offered By Me</h1>
-          </div>
+          </motion.div>
 
           <div className="container grid topMargin">
             {
-              ServicesData.map(value => {
+              ServicesData.map((value,i) => {
                 return(
                   <>
-                  <div className="box">
+                  <motion.div 
+                  variants={animateDiv}
+                  initial='initial'
+                  whileInView='animate'
+                  viewport={{
+                    once:true
+                  }}
+                  custom={i}
+                   key={value.title} className="box">
                     <div className="img">
                       <img src={value.cover} alt='service'/>
                     </div>
@@ -25,7 +51,7 @@ function Servicess() {
                       <h2>{value.title}</h2>
                       <p>{value.desc}</p>
                     </div>
-                  </div>
+                  </motion.div>
                   </>
                 )
               })

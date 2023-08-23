@@ -35,7 +35,7 @@ const pathname = path.split("/")[1]
     <>
       <header className=' header' style={blogNav}>
         <div className="container flex">
-            <img className='logo' src={process.env.PUBLIC_URL + '/images/logo.png'} alt='logo' width={75} height={75} style={{marginTop:'-15px',borderRadius : '100%'}}/>
+            <Link to="/"><img className='logo' src={process.env.PUBLIC_URL + '/images/logo.png'} alt='logo' width={75} height={75} style={{marginTop:'-15px',borderRadius : '100%'}}/></Link> 
  
 
         <div className="nav">
@@ -58,10 +58,13 @@ const pathname = path.split("/")[1]
                 <li>
                     <Link style={links} to='/contact' className={pathname == 'contact' ? 'navActive' : '' }>Contact</Link>
                 </li>
+                <li>
+                    <Link style={links} to='/faq' className={pathname == 'faq' ? 'navActive' : '' }>FAQ</Link>
+                </li>
                 <li className='icon' style={links}>
-                    <i><FontAwesomeIcon icon={faSearch} className='HeaderIcon' /></i>
-                    <i><FontAwesomeIcon icon={faBagShopping} className='HeaderIcon' /></i>
-                    <i><FontAwesomeIcon icon={faBox} className='HeaderIcon' /></i>
+                    <a href="/shop"><i><FontAwesomeIcon icon={faSearch} className='HeaderIcon' /></i></a>
+                    <a href="/shop"><i><FontAwesomeIcon icon={faBagShopping} className='HeaderIcon' /></i></a>
+                    <a href="/shop"><i><FontAwesomeIcon icon={faBox} className='HeaderIcon' /></i></a>
                     </li>
 
             </ul>

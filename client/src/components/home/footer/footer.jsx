@@ -1,6 +1,6 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope,faPhone,faLocation, } from '@fortawesome/free-solid-svg-icons';
-import {faInstagram,faTwitter,faYoutube,faPinterest,faDribbble} from '@fortawesome/free-brands-svg-icons'
+import {faFacebook,faInstagram,faTwitter,faYoutube,faPinterest,faDribbble} from '@fortawesome/free-brands-svg-icons'
 
 
 import React from 'react'
@@ -15,12 +15,12 @@ function Footer() {
                <img src={process.env.PUBLIC_URL + '/images/logo.png'} alt="logo" />
                <p>My skills as a software engineer transcend lines of code, extending into a realm of limitless possibilities.</p>
                <div className="social-icons">
-                    {/* <a href=''><FontAwesomeIcon icon={faFacebook} className='facebook i' /></a> */}
-                    <a href=''><FontAwesomeIcon icon={faInstagram} className='instagram i' /></a>
-                    <a href=''><FontAwesomeIcon icon={faTwitter} className='twitter i' /></a>
-                    <a href=''><FontAwesomeIcon icon={faYoutube} className='youtube i' /></a>
-                    <a href=''><FontAwesomeIcon icon={faPinterest} className='pinterest i' /></a>
-                    <a href=''><FontAwesomeIcon icon={faDribbble} className='dribbble i' /></a>
+                    <a href='https://web.facebook.com/profile.php?id=61550055825828'><FontAwesomeIcon icon={faFacebook} className='facebook i' /></a>
+                    <a href='https://www.instagram.com/mrr.jew/'><FontAwesomeIcon icon={faInstagram} className='instagram i' /></a>
+                    <a href='https://twitter.com/JewLarbi'><FontAwesomeIcon icon={faTwitter} className='twitter i' /></a>
+                    <a href='https://www.youtube.com/@CodeSageJ-ll5fq'><FontAwesomeIcon icon={faYoutube} className='youtube i' /></a>
+                    <a href='https://www.pinterest.com/jwlarbi/'><FontAwesomeIcon icon={faPinterest} className='pinterest i' /></a>
+                    <a href='https://dribbble.com/CodeSageJ'><FontAwesomeIcon icon={faDribbble} className='dribbble i' /></a>
                 </div>
              </div>
              <div className="box">
@@ -50,21 +50,21 @@ function Footer() {
              <div className="box">
                 <h2>Recent Posts</h2>
                 <div className="text">
-                   <Link to=''>
+                   <Link to='/blog'>
                    <p>
                     3 WooCommerce Plugins to boost sales
                    </p>
                    <span>28 FEB, 2022</span>
                    </Link>
 
-                   <Link to=''>
+                   <Link to='/blog'>
                    <p>
                     3 WooCommerce Plugins to boost sales
                    </p>
                    <span>28 FEB, 2022</span>
                    </Link>
 
-                   <Link to=''>
+                   <Link to='/blog'>
                    <p>
                     3 WooCommerce Plugins to boost sales
                    </p>

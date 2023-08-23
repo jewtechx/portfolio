@@ -12,12 +12,8 @@ function Wrapper() {
             <h1>Discover New Articles Here</h1>
 
             <div className="social-icons">
-                <a href=''>
-                    <FontAwesomeIcon icon={faTwitter}/>
-                </a>
-                <a href=''>
-                    <FontAwesomeIcon icon={faYoutube}/>
-                </a>
+                  <a href='https://twitter.com/JewLarbi'><FontAwesomeIcon icon={faTwitter}  /></a>
+                  <a href='https://www.youtube.com/@CodeSageJ-ll5fq'><FontAwesomeIcon icon={faYoutube} /></a>
             </div>
         </div>
 
