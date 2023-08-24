@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css'
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { HashRouter, Routes, Route } from 'react-router-dom';
 
 import Header from './components/home/header/header';
 import Footer from './components/home/footer/footer';
@@ -23,7 +23,7 @@ import AdminPageContent from './components/admin/pageContent/adminPageContent';
 export default function App() {
   return (
     <>
-    <BrowserRouter>
+    <HashRouter>
     <Header/>
       <Routes>
          <Route path='/' element={<HomePages />} />
@@ -41,7 +41,7 @@ export default function App() {
          <Route path='/admin' element={<AdminPageContent />}/>
       </Routes>
       <Footer />
-    </BrowserRouter>
+    </HashRouter>
     </>
   );
 }
