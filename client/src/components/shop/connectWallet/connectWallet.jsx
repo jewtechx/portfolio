@@ -15,7 +15,7 @@ function ConnectWallet() {
           duration:0.1
         }}
         // exit={{ opacity: 0, scale: 0.5, rotate: 270, borderRadius: '0%' }}
-        src="/images/CryptoWallet.png"
+        src={process.env.PUBLIC_URL + "/images/CryptoWallet.png"}
         alt="wallet"
       />
             <motion.a initial={{y:50}} animate={{y:0}} href="/">Connect wallet</motion.a>

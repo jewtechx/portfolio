@@ -1,54 +1,54 @@
 const data = [
     {
-        image:"/images/graphics/birthday - RUTH.png",
+        image:process.env.PUBLIC_URL + "/images/graphics/birthdayRUTH.png",
         name:"birthday - RUTH"
     },
     {
-        image:"/images/graphics/church flyer.png",
+        image:process.env.PUBLIC_URL + "/images/graphics/churchflyer.png",
         name:"church flyer"
     },
     {
-        image:"/images/graphics/ella birthday.png",
+        image:process.env.PUBLIC_URL + "/images/graphics/ellabirthday.png",
         name:"ella birthday"
     },
     {
-        image:"/images/graphics/ABU.png",
+        image:process.env.PUBLIC_URL + "/images/graphics/ABU.png",
         name:"ABU"
     },
     {
-        image:"/images/graphics/gratitude.png",
+        image:process.env.PUBLIC_URL + "/images/graphics/gratitude.png",
         name:"gratitude.png"
     },
     {
-        image:"/images/graphics/ikebirthday.png",
+        image:process.env.PUBLIC_URL + "/images/graphics/ikebirthday.png",
         name:"ikebirthday.png"
     },
     {
-        image:"/images/graphics/jew.png",
+        image:process.env.PUBLIC_URL + "/images/graphics/jew.png",
         name:"jew"
     },
     {
-        image:"/images/graphics/collage.png",
+        image:process.env.PUBLIC_URL + "/images/graphics/collage.png",
         name:"collage"
     },
     {
-        image:"/images/graphics/quote2.png",
+        image:process.env.PUBLIC_URL + "/images/graphics/quote2.png",
         name:"quote2"
     },
     {
-        image:"/images/graphics/abu logo.png",
+        image:process.env.PUBLIC_URL + "/images/graphics/abulogo.png",
         name:"abu logo"
     },
     {
-        image:"/images/graphics/shilow.png",
+        image:process.env.PUBLIC_URL + "/images/graphics/shilow.png",
         name:"shilow"
     },
     {
-        image:"/images/graphics/shoe advert flyer.png",
+        image:process.env.PUBLIC_URL + "/images/graphics/shoeadvertflyer.png",
         name:"shoe advert"
     },
     {
-        image:"/images/graphics/small girl.png",
+        image:process.env.PUBLIC_URL +"/images/graphics/smallgirl.png",
         name:"small girl"
     },
 ]

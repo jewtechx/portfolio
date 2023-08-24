@@ -38,11 +38,6 @@ function Home() {
         <div className="container flex">
             <motion.div
             initial={{x:-100}}
-            drag
-            dragConstraints={{
-              x:100,
-              y:100
-            }}
             animate={{x:0}}
             transition={{
               when:'beforeChildren',
