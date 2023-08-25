@@ -33,7 +33,7 @@ export default function ContactUs(){
 
                 <div className="field">
                     <label htmlFor="message" className="input">Message</label>
-                    <textarea className="textarea"/>
+                    <textarea className="textarea" name="message"/>
                 </div>
 
                 <div className="button-holder">

@@ -35,7 +35,7 @@ const data = [
     {
         mainCoverImage: process.env.PUBLIC_URL + "/images/backerchain/backerchain1.JPG",
         title: "BackerChain Crowfunding",
-        desc: "This websites funders support start-ups with SOL transparently and at low transaction costs.",
+        desc: "This websites allows funders to support start-ups with SOL transparently and at low transaction costs.",
         subImages2: process.env.PUBLIC_URL + "/images/backerchain/backerchain2.JPG",
         subImages3: process.env.PUBLIC_URL + "/images/backerchain/backerchain3.JPG",
         subImages4: process.env.PUBLIC_URL + "/images/backerchain/backerchain4.JPG",
