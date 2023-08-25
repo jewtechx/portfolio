@@ -62,9 +62,9 @@ const pathname = path.split("/")[1]
                     <Link style={links} to='/faq' className={pathname == 'faq' ? 'navActive' : '' }>FAQ</Link>
                 </li>
                 <li className='icon' style={links}>
-                    <a href="/shop"><i><FontAwesomeIcon icon={faSearch} className='HeaderIcon' /></i></a>
-                    <a href="/shop"><i><FontAwesomeIcon icon={faBagShopping} className='HeaderIcon' /></i></a>
-                    <a href="/shop"><i><FontAwesomeIcon icon={faBox} className='HeaderIcon' /></i></a>
+                    <Link to="/shop"><i><FontAwesomeIcon icon={faSearch} className='HeaderIcon' /></i></Link>
+                    <Link to="/shop"><i><FontAwesomeIcon icon={faBagShopping} className='HeaderIcon' /></i></Link>
+                    <Link to="/shop"><i><FontAwesomeIcon icon={faBox} className='HeaderIcon' /></i></Link>
                     </li>
 
             </ul>
